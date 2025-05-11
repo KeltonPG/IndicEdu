@@ -35,10 +35,10 @@ O **IndicEdu** é uma plataforma voltada para a visualização de indicadores ed
 | Ana Cleia Pereira da Silva        | UX/UI Design                     | Ana.cleia.silva@uemasul.edu.br |
 | Emilly Adryelle Colins de Menezes | UX/UI Design                     |                                |
 | Nadia Beatriz Gomes Monteiro      | UX/UI Design                     |                                |
-| Ediney dos Passos Tavares         | Edineyp.tavares@gmail.com        |
-| Enzo Henry Raiol Fernandes        | enzohenry207@gmail.com           |
-| Isabela Moura Mendonça            | isabela.moura.mendonca@gmail.com |
-| Kelton Kauã Oliveira dos Santos   | keltonsantos509@gmail.com        |
+| Ediney dos Passos Tavares         | Front-End                        |Edineyp.tavares@gmail.com       |
+| Enzo Henry Raiol Fernandes        | Front-End                        | enzohenry207@gmail.com         |
+| Isabela Moura Mendonça            | Front-End                        |isabela.moura.mendonca@gmail.com|
+| Kelton Kauã Oliveira dos Santos   | Front-End                        |keltonsantos509@gmail.com       |
 | Otemilson Nunes Moraes            | —                                |                                |
 
 ---
