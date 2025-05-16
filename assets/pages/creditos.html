@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndicEdu - Equipe</title>
+    <link rel="stylesheet" href="/assets/styles/equipe.css" />
+  </head>
+  <body>
+    <main class="equipe-page">
+      <header class="equipe-header">
+        <div class="logo">
+          <img src="/assets/images/logo.svg" alt="Logo" />
+        </div>
+        <h1>Sobre a equipe</h1>
+        <a href="/index.html" class="inicio-link">Início</a>
+      </header>
+
+      <div class="cards-container" id="cards-container"></div>
+
+      <div id="backdrop"></div>
+    </main>
+
+    <script>
+      const membros = [
+        {
+          nome: "Nádia",
+          cidade: "São Luís - MA",
+          cargo: "UX designer",
+          instagram: "@_nadiabeatriz",
+          email: "nadia@email.com",
+          linkedin: "#",
+          nomeCompleto: "Nádia Beatriz Gomes Monteiro",
+        },
+        {
+          nome: "Adry",
+          cidade: "Teresina - PI",
+          cargo: "UX designer",
+          instagram: "@Adry",
+          email: "adryellecmenezes@gmail.com",
+          linkedin: "",
+          nomeCompleto: "Eren Tavares",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+        {
+          nome: "Kelton",
+          cidade: "São Luís - MA",
+          cargo: "Desenvolvedor Front-End",
+          instagram: "@keltondev",
+          email: "kelton@email.com",
+          linkedin: "https://linkedin.com/in/kelton",
+          nomeCompleto: "Kelton da Silva",
+        },
+      ];
+
+      const container = document.getElementById("cards-container");
+      const backdrop = document.getElementById("backdrop");
+
+      membros.forEach((membro) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img class="profile-img" src="https://via.placeholder.com/80" alt="Foto de ${membro.nome}" />
+          <h3>${membro.nome}</h3>
+          <p>📍 ${membro.cidade}</p>
+          <p>💼 ${membro.cargo}</p>
+          <p>📸 ${membro.instagram}</p>
+          <div class="extra-info">
+            <p>📧 ${membro.email}</p>
+            <p>🔗 <a href="${membro.linkedin}" target="_blank">LinkedIn</a></p>
+            <p>${membro.nomeCompleto}</p>
+          </div>
+        `;
+
+        card.addEventListener("click", () => {
+          const isExpanded = card.classList.contains("expanded");
+          document
+            .querySelectorAll(".card.expanded")
+            .forEach((c) => c.classList.remove("expanded"));
+
+          if (isExpanded) {
+            backdrop.classList.remove("active");
+          } else {
+            card.classList.add("expanded");
+            backdrop.classList.add("active");
+          }
+        });
+
+        container.appendChild(card);
+      });
+
+      backdrop.addEventListener("click", () => {
+        document
+          .querySelectorAll(".card.expanded")
+          .forEach((c) => c.classList.remove("expanded"));
+        backdrop.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

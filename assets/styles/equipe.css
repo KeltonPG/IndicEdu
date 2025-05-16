@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #001f4d;
+  color: white;
+}
+
+.equipe-header {
+  background-color: #002a6d;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.equipe-header .logo img {
+  height: 32px;
+}
+
+.equipe-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.inicio-link {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #002a6d;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 300px;
+  position: relative;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card.expanded {
+  background-color: #003377;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%) scale(1.05);
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-height: none;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.extra-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.card.expanded .extra-info {
+  display: block;
+}
+
+#backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+#backdrop.active {
+  display: block;
+}

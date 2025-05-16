@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf2f2;
+  color: #000;
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffa726;
+}
+
+.header-title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
+  flex: 1;
+  text-align: center;
+}
+
+.dashboard-link {
+  color: #ffa726;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dashboard-link:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+.dashboard-content {
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dropdowns */
+.dropdowns {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #ffa726;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff7f0;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+  min-width: 180px;
+  z-index: 10;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown ul li:hover {
+  background-color: #ffe0b2;
+}
+
+/* Botão de comparar */
+.compare-button button {
+  background-color: #ffa726;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.compare-button button:hover {
+  background-color: #fb8c00;
+}
+.selection-display {
+  margin-top: 1rem;
+  font-weight: 500;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 400px;
+  border: 1px solid #ddd;
+}

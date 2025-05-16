@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndicEdu - Dashboard</title>
+    <link rel="stylesheet" href="/assets/styles/dashboard.css" />
+  </head>
+  <body>
+    <main id="dashboard" class="dashboard">
+      <header class="dashboard-header">
+        <div class="logo">IndicEdu</div>
+        <span class="header-title">Dashboard - Indicadores da educação</span>
+        <a href="/index.html" class="dashboard-link">Início</a>
+      </header>
+
+      <section class="dashboard-content">
+        <div class="dropdowns">
+          <div class="dropdown">
+            <button class="dropdown-btn">Indicador ▼</button>
+            <ul>
+              <li class="indicator-option" data-indicator="ideb">IDEB</li>
+              <li class="indicator-option" data-indicator="evasao">
+                Evasão Escolar
+              </li>
+              <li class="indicator-option" data-indicator="infraestrutura">
+                Infraestrutura
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-btn">Estado ▼</button>
+            <ul>
+              <li class="state-option" data-state="MA">Maranhão</li>
+              <li class="state-option" data-state="SP">São Paulo</li>
+              <li class="state-option" data-state="GO">Goiás</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="selection-display" class="selection-display"></div>
+
+        <div class="compare-button">
+          <button id="compareButton">Compare os Estados</button>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/scripts/db_script.js"></script>
+  </body>
+</html>
